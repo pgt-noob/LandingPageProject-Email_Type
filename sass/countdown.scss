@@ -1,0 +1,39 @@
+.countdown{
+    background-color: var(--primary-yellow);
+    max-width: 100%;
+    padding: 58px 100px;
+    display: block;
+    margin-bottom: 140px;
+    &_list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 138px;
+    }
+    &_item{
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+        text-align: center;
+    }
+    &_title{
+        font-size: 44px;
+        color: var(--gray-1e);
+        font-weight: 600;
+    }
+    &_text{
+        font-size: 18px;
+        color: var(--blackLight);
+    }
+    @include maxWidth (1024px) {
+        padding: 61px 56px 82px;
+        margin-bottom: 61px;
+        &_list{
+            flex-direction: column;
+            row-gap: 64px;
+        }
+        &_item{
+            row-gap: 20px;
+        }
+    }
+}

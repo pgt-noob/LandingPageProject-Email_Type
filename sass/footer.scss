@@ -1,0 +1,112 @@
+.footer {
+  background-color: var(--gray-1e);
+  color: white;
+  padding-block: 75px;
+  &_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 76px;
+    align-items: center;
+  }
+  &_header {
+    max-width: 447px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .footer_logo_link{
+      display: none;
+    }
+  }
+  &_heading {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 63px;
+    margin-bottom: 15px;
+  }
+  &_text {
+    color: var(--grayb5);
+    font-size: 18px;
+    max-width: 338px;
+    text-align: center;
+    display: block;
+    margin-bottom: 35px;
+  }
+  &_button {
+    padding: 15px 20px;
+    background-color: var(--button-bg);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ion-icon {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+  &_footer{
+    display: flex;
+    flex-direction: row;
+  }
+  &_logo {
+    max-width: 280px;
+    margin-right: 114px;
+    &_link {
+      margin-bottom: 31px;
+      display: block;
+      span {
+        font-size: 26px;
+        font-weight: 600;
+        margin-left: 15px;
+      }
+    }
+  }
+  &_desc{
+    color: var(--grayb5);
+    margin-bottom: 15px;
+  }
+  &_info{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  &_title{
+    font-weight: 600;
+  }
+  &_link_list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 70px;
+    &_item{
+        color: var(--grayb5);
+    }
+  }
+  @include maxWidth (1024px) {
+    padding: 53px 75px;
+    &_header{
+      .footer_logo_link{
+        display: block;
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+    }
+    &_heading{
+      font-size: 30px;
+      margin-bottom: 12px;
+      line-height: 40px;
+    }
+    &_text{
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    &_button{
+      width: 223px;
+    }
+    &_footer{
+      display: none;
+    }
+  }
+}

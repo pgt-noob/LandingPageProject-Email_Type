@@ -1,0 +1,90 @@
+.tools{
+    background-color: var(--gray-1e);
+    padding-left: 150px;
+    padding-right: 92px;
+    padding-block: 63px;
+    margin-bottom: 140px;
+    &_main{
+        display: flex;
+        flex-direction: row;
+        column-gap: 80px;
+
+    }
+    &_desc{
+        display: flex;
+        flex-direction: column;
+    }
+    &_heading{
+        color: white;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 63px;
+        max-width: 583px;
+        margin-bottom: 9px;
+    }
+    &_text{
+        color: var(--grayb5);
+        font-size: 18px;
+        margin-bottom: 41px;
+    }
+    &_button{
+        background-color: var(--button-bg);
+        width: fit-content;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 10px;
+        ion-icon{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 5px;
+            width: 15px;
+        }
+    }
+    &_image{
+        max-width: 534px;
+        & img{
+            width: 100%;
+        }
+    }
+    @include maxWidth (1024px) {
+        padding: 80px 0 ;
+        margin-bottom: 60px;
+        &_main{
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+        &_desc{
+            width: 326px;
+        }
+        &_heading{
+            font-size: 30px;
+            line-height: 40px;
+            max-width: 255px;
+        }
+        &_text{
+            max-width: 286px;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 63px;
+        }
+        &_button{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px 66px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 17px;
+            ion-icon{
+                margin-left: 19px;
+                top: 0;
+                transform: translate(0);
+            }
+        }
+        &_image{
+            max-width: 348px;
+        }
+    }
+}

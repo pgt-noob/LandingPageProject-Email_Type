@@ -1,0 +1,119 @@
+.tesmonials{
+    margin-bottom: 140px;
+    &_main{
+        display: flex;
+        flex-direction: column;
+        row-gap: 75px;
+        justify-content: center;
+        align-items: center;
+    }
+    &_heading{
+        font-weight: 600;
+        font-size: 50px;
+        // line-height: 63px;
+        text-align: center;
+        max-width: 600px;
+    }
+    &_content{
+        display: flex;
+        flex-direction: row;
+        column-gap: 77px;
+        align-items: center;
+    }
+    &_image{
+        max-width: 500px;
+        flex-shrink: 0;
+        & img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &_text{
+        flex: 1;
+        font-size: 23px;
+        line-height: 40px;
+        margin-bottom: 27px;
+    }
+    &_from{
+        color: var(--gray-7d);
+        margin-bottom: 14px;
+        display: block;
+    }
+    &_rating{
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        margin-bottom: 9px;
+    }
+    &_dir{
+        display: flex;
+        flex-direction: row;
+        column-gap: 8px;
+        justify-content: flex-end;
+        width: 100%;
+        &_left,
+        &_right{
+            background-color: rgba(0,0,0,0.08);
+            color: black;
+            padding: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            transition: all .2s ease;
+            font-size: 20px;
+            ion-icon{
+                transition: .2s ease all;
+            }
+            &:hover{
+                background-color: var(--button-bg);
+                color: white;
+                ion-icon{
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+    @include maxWidth(1024px) {
+        margin-bottom: 68px;
+        &_main{
+            gap: 14px;
+            align-items: flex-start;
+            padding-inline: 29px;
+        }
+        &_heading{
+            font-size: 30px;
+            line-height: 40px;;
+            max-width: 241px;
+            text-align: start;
+        }
+        &_content{
+            flex-direction: column-reverse;
+        }
+        &_text{
+            font-size: 14px;
+            line-height: 24px;
+            max-width: 317px;
+            margin-bottom: 23px;
+        }
+        &_from{
+            margin-bottom: 9px;
+        }
+        &_rating{
+            gap: 0;
+            &_number{
+                margin-bottom: 42px;
+                font-size: 17px;
+            }
+        }
+        &_image{
+            max-width: 317px;
+            margin-bottom: 34px;
+        }
+        &_dir_left,
+        &_dir_right{
+            padding: 19px;
+            font-size: 16px;
+        }
+    }
+}

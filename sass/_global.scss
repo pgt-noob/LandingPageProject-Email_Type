@@ -1,0 +1,37 @@
+@import 'mixins';
+
+body{
+    font-family: var(--primary-font);
+    background-color: var(--body-bg);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.wrapper{
+    max-width: var(--body-size);
+}
+
+.container{
+    max-width: calc(var(--container) + var(--gap)*2);
+    padding: 0, var(--gap);
+    margin-inline: auto;
+    display: block;
+    @include maxWidth (1023px) {
+        max-width: 100%;
+    }
+}
+a{
+    text-decoration: none;
+}
+.text-primary{
+    background: -webkit-linear-gradient(
+        93.52deg,
+        #e6ff4b 8.71%,
+        #00bd82 98.16%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.gray-1e{
+    color: var(--gray-1e);
+}
