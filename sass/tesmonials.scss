@@ -14,6 +14,61 @@
         text-align: center;
         max-width: 600px;
     }
+    &_slider{
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+    .slick-initialized .slick-slide{
+        margin-inline: 20px;
+    }
+    .slick-next{
+        right: 0;
+    }
+    .slick-next,.slick-prev{
+        position: relative;
+        background-color: rgba(0,0,0,0.08);
+            color: black;
+            padding: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            transition: all .2s ease;
+            border: none;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--button-bg);
+                color: white;
+                ion-icon{
+                    transition: .2s ease all;
+                    transform: scale(1.5);
+                }
+            }
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50px);
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 15px;
+        & button{
+            font-size: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--grayb5);
+            cursor: pointer;
+            transition: .2s ease all;
+        }
+        & .slick-active button{
+            background-color: var(--button-bg);
+        }
+    }
     &_content{
         display: flex;
         flex-direction: row;
@@ -23,6 +78,7 @@
     &_image{
         max-width: 500px;
         flex-shrink: 0;
+        margin-bottom: 15px;
         & img{
             width: 100%;
             object-fit: contain;
@@ -45,35 +101,35 @@
         column-gap: 10px;
         margin-bottom: 9px;
     }
-    &_dir{
-        display: flex;
-        flex-direction: row;
-        column-gap: 8px;
-        justify-content: flex-end;
-        width: 100%;
-        &_left,
-        &_right{
-            background-color: rgba(0,0,0,0.08);
-            color: black;
-            padding: 23px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            transition: all .2s ease;
-            font-size: 20px;
-            ion-icon{
-                transition: .2s ease all;
-            }
-            &:hover{
-                background-color: var(--button-bg);
-                color: white;
-                ion-icon{
-                    transform: scale(1.5);
-                }
-            }
-        }
-    }
+    // &_dir{
+    //     display: flex;
+    //     flex-direction: row;
+    //     column-gap: 8px;
+    //     justify-content: flex-end;
+    //     width: 100%;
+    //     &_left,
+    //     &_right{
+    //         background-color: rgba(0,0,0,0.08);
+    //         color: black;
+    //         padding: 23px;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         border-radius: 15px;
+    //         transition: all .2s ease;
+    //         font-size: 20px;
+    //         ion-icon{
+    //             transition: .2s ease all;
+    //         }
+    //         &:hover{
+    //             background-color: var(--button-bg);
+    //             color: white;
+    //             ion-icon{
+    //                 transform: scale(1.5);
+    //             }
+    //         }
+    //     }
+    // }
     @include maxWidth(1024px) {
         margin-bottom: 68px;
         &_main{
@@ -114,6 +170,9 @@
         &_dir_right{
             padding: 19px;
             font-size: 16px;
+        }
+        .slick-next,.slick-prev{
+            display: none !important;
         }
     }
 }
